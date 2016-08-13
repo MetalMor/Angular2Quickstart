@@ -15,13 +15,39 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = "Angular 2 app";
+        this.title = "Prueba Angular 2";
         this.visible = false;
     }
+    AppComponent.prototype.switchText = function () {
+        var action;
+        this.visible = !this.visible;
+        action = this.visible ? "Showing" : "Hiding";
+        console.log(action + " text.");
+    };
+    Object.defineProperty(AppComponent.prototype, "title", {
+        get: function () {
+            return this._title;
+        },
+        set: function (title) {
+            this._title = title;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AppComponent.prototype, "visible", {
+        get: function () {
+            return this._visible;
+        },
+        set: function (visible) {
+            this._visible = visible;
+        },
+        enumerable: true,
+        configurable: true
+    });
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            templateUrl: 'app/app.component.html'
+            templateUrl: 'app/templates/app.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
