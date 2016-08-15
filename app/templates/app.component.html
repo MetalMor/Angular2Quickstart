@@ -1,3 +1,3 @@
-<h1>{{ _title }}</h1>
-<button (click)="switchText()">Show / Hide</button>
-<p *ngIf="_visible">HOWDY</p>
+<h1>{{ title }}</h1>
+<button (click)="switchText()">{{ getButtonText() }}</button>
+<p *ngIf="visible">HOWDY</p>
